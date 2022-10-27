@@ -12,9 +12,9 @@ public class FareCalculatorService {
 
         long inHour = ticket.getInTime().getTime();
         long outHour = ticket.getOutTime().getTime();
-
+        double constant = 3600000.0;
         //Fixed logic that is more suitable
-        double duration = (outHour - inHour) / 3600000;
+        double duration = (outHour - inHour) / constant;
 
         //Condition: If the duration (in hours) does not exceed 30 minutes (i.e. 0.5)
         //Parking is free
